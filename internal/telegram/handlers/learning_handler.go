@@ -53,28 +53,37 @@ func (h *LearningHandler) RegisterCallback() telegram.Handler {
 			userId := ctx.Sender().ID
 
 			go func() {
-				time.Sleep(2 * time.Second)
+				time.Sleep(30 * time.Second)
 				_ = ctx.Delete()
 			}()
 
 			questionId, selectedOption, err := h.parseCallbackPayload(ctx)
 			if err != nil {
-				return ctx.Respond(&telebot.CallbackResponse{Text: err.Error()})
+				return h.handleError(ctx, userId, err)
 			}
 
 			question, err := h.questionRepository.FindQuestionById(questionId)
 			if err != nil {
-				log.Printf("Failed to find question %d: %v", questionId, err)
-				return ctx.Respond(&telebot.CallbackResponse{Text: "Frage konnte nicht gefunden werden."})
+				return h.handleError(ctx, userId, err)
 			}
 
-			feedbackText, err := h.evaluateAnswer(userId, questionId, selectedOption, question.CorrectAnswer)
+			answeredCorrectly, feedbackText, err := h.evaluateAnswer(userId, selectedOption, question)
 			if err != nil {
-				log.Printf("Failed to update progress for user %d: %v", userId, err)
+				return h.handleError(ctx, userId, err)
 			}
 
+			if !answeredCorrectly {
+				// Show the correct answer with a game-like auto-deleting message
+				msg, _ := ctx.Bot().Send(ctx.Recipient(), fmt.Sprintf("💡 Richtige Antwort wäre gewesen:\n\n%s", question.GetCorrectAnswerText()))
+				if msg != nil {
+					go func() {
+						time.Sleep(30 * time.Second)
+						_ = ctx.Bot().Delete(msg)
+					}()
+				}
+			}
 			if err := ctx.Respond(&telebot.CallbackResponse{Text: feedbackText}); err != nil {
-				log.Printf("Failed to respond to callback for user %d: %v", userId, err)
+				return h.handleError(ctx, userId, err)
 			}
 
 			return h.sendQuestion(ctx, userId)
@@ -110,7 +119,7 @@ func (h *LearningHandler) sendQuestion(ctx telebot.Context, userId int64) error 
 // handleError logs operational errors and sends a generic error message to the user.
 func (h *LearningHandler) handleError(ctx telebot.Context, userId int64, err error) error {
 	log.Printf("Failed for user %d: %v", userId, err)
-	return ctx.Send("Es ist ein Fehler aufgetreten. Bitte versuche es später noch einmal.")
+	return ctx.Send("🚨 Alarm in der Zentrale! Etwas ist schiefgelaufen. Bitte lade deine Energie auf und versuche es gleich noch einmal! 🔄")
 }
 
 // initReplyMarkup builds the inline keyboard markup containing the options for a question.
@@ -153,12 +162,12 @@ func (h *LearningHandler) parseCallbackPayload(ctx telebot.Context) (int, string
 }
 
 // evaluateAnswer checks if the selected option matches the correct answer and updates user progress accordingly.
-func (h *LearningHandler) evaluateAnswer(userId int64, questionId int, selectedOption, correctAnswer string) (string, error) {
-	if selectedOption == correctAnswer {
-		err := h.userProgressRepository.HandleCorrectAnswer(userId, questionId)
-		return "Richtig! :)", err
+func (h *LearningHandler) evaluateAnswer(userId int64, selectedOption string, question *models.Question) (bool, string, error) {
+	if selectedOption == question.CorrectAnswer {
+		err := h.userProgressRepository.HandleCorrectAnswer(userId, question.ID)
+		return true, "✅ Richtig! +1 XP 😇", err
 	}
 
-	err := h.userProgressRepository.HandleWrongAnswer(userId, questionId)
-	return "Falsch! :(", err
+	err := h.userProgressRepository.HandleWrongAnswer(userId, question.ID)
+	return false, "❌ Falsch! -1 XP 😈", err
 }

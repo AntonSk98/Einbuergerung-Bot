@@ -38,7 +38,7 @@ func (h *SelectFederalStateCallbackHandler) RegisterCallback() telegram.Handler 
 			federalState, err := models.ResolveFederalStateByCode(payload)
 			if err != nil {
 				return c.Respond(&telebot.CallbackResponse{
-					Text: "Ungültiges Bundesland. Bitte versuche es erneut.",
+					Text: "⚠️ Mission fehlgeschlagen! Ungültiges Bundesland. Versuch's noch einmal! 🧭",
 				})
 			}
 
@@ -46,11 +46,11 @@ func (h *SelectFederalStateCallbackHandler) RegisterCallback() telegram.Handler 
 
 			if err := h.userRepository.PersistFederalState(userId, federalState); err != nil {
 				return c.Respond(&telebot.CallbackResponse{
-					Text: "Fehler beim Speichern. Bitte versuche es erneut.",
+					Text: "⚠️ Speicherstand beschädigt! Fehler beim Sichern deines Bundeslandes. Noch einmal versuchen! 💾",
 				})
 			}
 
-			return c.Send("Danke! Deine Auswahl wurde gespeichert. Du kannst dich jetzt auf deinen Einbürgerungstest vorbereiten! Starte mit /learning!")
+			return c.Send("🏆 Bundesland erfolgreich gespeichert! Dein Abenteuer kann beginnen.\n\n⚡ Starte jetzt mit /learning und sammle deine ersten XP! 🚀")
 		},
 	}
 }

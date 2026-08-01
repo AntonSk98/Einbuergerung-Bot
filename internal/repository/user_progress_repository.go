@@ -9,6 +9,40 @@ type UserProgressRepository struct {
 	db *sqlx.DB
 }
 
+// CountTotalAttempts returns the total number of attempts by taking the absolute sum of all correct_answer_weights.
+func (repo *UserProgressRepository) CountTotalAttempts(userId int64) int {
+	query := `
+		SELECT COALESCE(SUM(ABS(correct_answer_weight)), 0) 
+		FROM user_progress 
+		WHERE user_id = ?
+	`
+
+	var total int
+	err := repo.db.Get(&total, query, userId)
+	if err != nil {
+		return 0
+	}
+
+	return total
+}
+
+// GetNetScore returns the net score (correct minus incorrect attempts) for the user.
+func (repo *UserProgressRepository) GetNetScore(userId int64) int {
+	query := `
+        SELECT COALESCE(SUM(correct_answer_weight), 0) 
+        FROM user_progress 
+        WHERE user_id = ?
+    `
+
+	var score int
+	err := repo.db.Get(&score, query, userId)
+	if err != nil {
+		return 0
+	}
+
+	return score
+}
+
 // NewUserProgressRepository creates a new instance of UserProgressRepository with the given database connection.
 func NewUserProgressRepository(db *sqlx.DB) *UserProgressRepository {
 	return &UserProgressRepository{db: db}

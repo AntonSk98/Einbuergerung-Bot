@@ -28,7 +28,7 @@ func (m *AuthorizedUserMiddleware) RegisterMiddleware() telegram.Middleware {
 			isAllowed := slices.Contains(m.authorizedUserIdentifiers, currentUserID)
 
 			if !isAllowed {
-				return c.Send("⛔ You are not authorized to use this bot.")
+				return c.Send("🔒 Zugriff verweigert! Dieses Trainingslager ist aktuell privat. Kontaktiere @AntonSk98, um deinen Bot-Schlüssel freizuschalten! 🔑")
 			}
 
 			return next(c)

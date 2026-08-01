@@ -72,3 +72,19 @@ func ResolveFederalStateByCode(stateCode string) (string, error) {
 		return "", errors.New("invalid federal state code")
 	}
 }
+
+// GetCorrectAnswerText retrieves the actual text of the correct answer based on the stored option key (option_a, option_b, etc.).
+func (q *Question) GetCorrectAnswerText() string {
+	switch q.CorrectAnswer {
+	case "option_a":
+		return q.OptionA
+	case "option_b":
+		return q.OptionB
+	case "option_c":
+		return q.OptionC
+	case "option_d":
+		return q.OptionD
+	default:
+		return ""
+	}
+}

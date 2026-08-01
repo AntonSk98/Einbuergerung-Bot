@@ -28,10 +28,11 @@ func (h *InfoHandler) RegisterCommand() telegram.Handler {
 			}
 
 			message := fmt.Sprintf(
-				"👋 Willkommen, %s!\n\n"+
-					"Dieser Bot hilft dir dabei, den deutschen Einbürgerungstest erfolgreich zu bestehen. "+
-					"Er enthält alle offiziellen Fragen des BAMF.\n\n"+
-					"Verwende den Befehl /learning, um mit dem Lernen zu beginnen!",
+				"🪪 Willkommen im Trainingslager, %s! 🎯\n\n"+
+					"Bereit, den deutschen Einbürgerungstest im Sturm zu erobern? 🇩🇪 Dieser Bot ist dein persönlicher Coach mit allen offiziellen BAMF-Fragen.\n\n"+
+					"⚡ Tippe auf /learning, um deine erste Mission zu starten, Punkte zu sammeln und dem heiligen Pass näher zu kommen!\n\n"+
+					"--- \n\n"+
+					"☕ Dir gefällt das Abenteuer? Unterstütze die Entwicklung und spendiere dem Entwickler einen Kaffee: https://buymeacoffee.com/antonsk98",
 				name,
 			)
 

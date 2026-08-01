@@ -31,8 +31,7 @@ func NewFederalStateSelectedMiddleware(userRepository *repository.UserRepository
 func (m *FederalStateSelectedMiddleware) RegisterMiddleware() telegram.Middleware {
 	middlewareFunc := func(next telebot.HandlerFunc) telebot.HandlerFunc {
 		return func(ctx telebot.Context) error {
-
-			if ctx.Message() != nil && ctx.Message().Text != "/learning" {
+			if ctx.Message() == nil || ctx.Message().Text != "/learning" {
 				return next(ctx)
 			}
 
@@ -44,7 +43,7 @@ func (m *FederalStateSelectedMiddleware) RegisterMiddleware() telegram.Middlewar
 
 			selectFederalStateReplyMarkup := m.initReplyMarkup()
 
-			return ctx.Send("Es gibt Fragen die Bundesland spezifisch sind. Deswegen ist es wichtig die Bundesland auszuwählen", selectFederalStateReplyMarkup)
+			return ctx.Send("🗺️ Achtung, Rekrut! Einige Missionen sind bundeslandspezifisch. Wähle zuerst dein Bundesland aus, um fortzufahren:", selectFederalStateReplyMarkup)
 		}
 	}
 
@@ -55,16 +54,21 @@ func (m *FederalStateSelectedMiddleware) RegisterMiddleware() telegram.Middlewar
 
 // isFederalStateSelectedCached checks the external go-cache memory store for whether the user has selected a federal state, falling back to the repository if missing.
 func (m *FederalStateSelectedMiddleware) isFederalStateSelectedCached(userId int64) bool {
-	if cachedVal, found := m.stateCache.Get(strconv.FormatInt(userId, 10)); found {
+	cacheKey := strconv.FormatInt(userId, 10)
+
+	if cachedVal, found := m.stateCache.Get(cacheKey); found {
 		if selected, ok := cachedVal.(bool); ok {
 			return selected
 		}
 	}
 
-	selected := m.userRepository.FederalStateSelected(userId)
-	m.stateCache.Set(strconv.FormatInt(userId, 10), selected, cache.DefaultExpiration)
+	isFederalStateSelected := m.userRepository.FederalStateSelected(userId)
 
-	return selected
+	if isFederalStateSelected {
+		m.stateCache.Set(cacheKey, isFederalStateSelected, cache.DefaultExpiration)
+	}
+
+	return isFederalStateSelected
 }
 
 // initReplyMarkup builds an inline keyboard containing all German federal states for selection.
