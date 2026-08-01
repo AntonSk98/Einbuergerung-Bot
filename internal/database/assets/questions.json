@@ -1,0 +1,502 @@
+[
+    {
+        "federal_state": "general",
+        "question_text": "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",
+        "image_data": "",
+        "option_a": "hier Religionsfreiheit gilt.",
+        "option_b": "die Menschen Steuern zahlen.",
+        "option_c": "die Menschen das Wahlrecht haben.",
+        "option_d": "hier Meinungsfreiheit gilt.",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am …",
+        "image_data": "",
+        "option_a": "Geschichtsunterricht teilnimmt.",
+        "option_b": "Religionsunterricht teilnimmt.",
+        "option_c": "Politikunterricht teilnimmt.",
+        "option_d": "Sprachunterricht teilnimmt.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?",
+        "image_data": "",
+        "option_a": "Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.",
+        "option_b": "Der Staat muss sich nicht an die Gesetze halten.",
+        "option_c": "Nur Deutsche müssen die Gesetze befolgen.",
+        "option_d": "Die Gerichte machen die Gesetze.",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Recht gehört zu den Grundrechten in Deutschland?",
+        "image_data": "",
+        "option_a": "Waffenbesitz",
+        "option_b": "Faustrecht",
+        "option_c": "Meinungsfreiheit",
+        "option_d": "Selbstjustiz",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wahlen in Deutschland sind frei. Was bedeutet das?",
+        "image_data": "",
+        "option_a": "Man darf Geld annehmen, wenn man dafür eine bestimmte Kandidatin/einen bestimmten Kandidaten wählt.",
+        "option_b": "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+        "option_c": "Die Wählerin/der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+        "option_d": "Alle wahlberechtigten Personen müssen wählen.",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wie heißt die deutsche Verfassung?",
+        "image_data": "",
+        "option_a": "Volksgesetz",
+        "option_b": "Bundesgesetz",
+        "option_c": "Deutsches Gesetz",
+        "option_d": "Grundgesetz",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf …",
+        "image_data": "",
+        "option_a": "Glaubens- und Gewissensfreiheit",
+        "option_b": "Unterhaltung",
+        "option_c": "Arbeit",
+        "option_d": "Wohnung",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was steht nicht im Grundgesetz von Deutschland?",
+        "image_data": "",
+        "option_a": "Die Würde des Menschen ist unantastbar.",
+        "option_b": "Alle sollen gleich viel Geld haben.",
+        "option_c": "Jeder Mensch darf seine Meinung sagen.",
+        "option_d": "Alle sind vor dem Gesetz gleich.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …",
+        "image_data": "",
+        "option_a": "Schutz der Familie",
+        "option_b": "Menschenwürde",
+        "option_c": "Asyl",
+        "option_d": "Meinungsfreiheit",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was ist mit dem deutschen Grundgesetz vereinbar?",
+        "image_data": "",
+        "option_a": "die Prügelstrafe",
+        "option_b": "die Folter",
+        "option_c": "die Todesstrafe",
+        "option_d": "die Geldstrafe",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wie wird die Verfassung der Bundesrepublik Deutschland genannt?",
+        "image_data": "",
+        "option_a": "Grundgesetz",
+        "option_b": "Bundesverfassung",
+        "option_c": "Gesetzbuch",
+        "option_d": "Verfassungsvertrag",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?",
+        "image_data": "",
+        "option_a": "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
+        "option_b": "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.",
+        "option_c": "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+        "option_d": "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Im Parlament steht der Begriff \"Opposition\" für …",
+        "image_data": "",
+        "option_a": "die regierenden Parteien.",
+        "option_b": "die Fraktion mit den meisten Abgeordneten.",
+        "option_c": "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+        "option_d": "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Meinungsfreiheit in Deutschland heißt, dass ich …",
+        "image_data": "",
+        "option_a": "Passanten auf der Straße beschimpfen darf.",
+        "option_b": "meine Meinung im Internet äußern kann.",
+        "option_c": "Nazi-, Hamas- oder Islamischer Staat-Symbole öffentlich tragen darf.",
+        "option_d": "meine Meinung nur dann äußern darf, solange ich der Regierung nicht widerspreche.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was verbietet das deutsche Grundgesetz?",
+        "image_data": "",
+        "option_a": "Militärdienst",
+        "option_b": "Zwangsarbeit",
+        "option_c": "freie Berufswahl",
+        "option_d": "Arbeit im Ausland",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?",
+        "image_data": "",
+        "option_a": "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+        "option_b": "bei Meinungsäußerungen über die Bundesregierung",
+        "option_c": "bei Diskussionen über Religionen",
+        "option_d": "bei Kritik am Staat",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Die deutschen Gesetze verbieten …",
+        "image_data": "",
+        "option_a": "Meinungsfreiheit der Einwohnerinnen und Einwohner.",
+        "option_b": "Petitionen der Bürgerinnen und Bürger.",
+        "option_c": "Versammlungsfreiheit der Einwohnerinnen und Einwohner.",
+        "option_d": "Ungleichbehandlung der Bürgerinnen und Bürger durch den Staat.",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?",
+        "image_data": "",
+        "option_a": "die Unantastbarkeit der Menschenwürde",
+        "option_b": "das Recht auf Leben",
+        "option_c": "Religionsfreiheit",
+        "option_d": "Meinungsfreiheit",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was versteht man unter dem Recht der \"Freizügigkeit\" in Deutschland?",
+        "image_data": "",
+        "option_a": "Man darf sich seinen Wohnort selbst aussuchen.",
+        "option_b": "Man kann seinen Beruf wechseln.",
+        "option_c": "Man darf sich für eine andere Religion entscheiden.",
+        "option_d": "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",
+        "image_data": "",
+        "option_a": "tolerant.",
+        "option_b": "rechtsstaatlich orientiert.",
+        "option_c": "gesetzestreu.",
+        "option_d": "verfassungswidrig.",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches ist das Wappen der Bundesrepublik Deutschland?",
+        "image_data": "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",
+        "option_a": "Bild 1",
+        "option_b": "Bild 2",
+        "option_c": "Bild 3",
+        "option_d": "Bild 4",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was für eine Staatsform hat Deutschland?",
+        "image_data": "",
+        "option_a": "Monarchie",
+        "option_b": "Diktatur",
+        "option_c": "Republik",
+        "option_d": "Fürstentum",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "In Deutschland sind die meisten Erwerbstätigen …",
+        "image_data": "",
+        "option_a": "in kleinen Familienunternehmen beschäftigt.",
+        "option_b": "ehrenamtlich für ein Bundesland tätig.",
+        "option_c": "selbstständig mit einer eigenen Firma tätig.",
+        "option_d": "bei einer Firma oder Behörde beschäftigt.",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wie viele Bundesländer hat die Bundesrepublik Deutschland?",
+        "image_data": "",
+        "option_a": "14",
+        "option_b": "15",
+        "option_c": "16",
+        "option_d": "17",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was ist kein Bundesland der Bundesrepublik Deutschland?",
+        "image_data": "",
+        "option_a": "Elsass-Lothringen",
+        "option_b": "Nordrhein-Westfalen",
+        "option_c": "Mecklenburg-Vorpommern",
+        "option_d": "Sachsen-Anhalt",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Deutschland ist …",
+        "image_data": "",
+        "option_a": "eine kommunistische Republik.",
+        "option_b": "ein demokratischer und sozialer Bundesstaat.",
+        "option_c": "eine kapitalistische und soziale Monarchie.",
+        "option_d": "ein sozialer und sozialistischer Bundesstaat.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Deutschland ist …",
+        "image_data": "",
+        "option_a": "ein sozialistischer Staat.",
+        "option_b": "ein Bundesstaat.",
+        "option_c": "eine Diktatur.",
+        "option_d": "eine Monarchie.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wer wählt in Deutschland die Abgeordneten zum Bundestag?",
+        "image_data": "",
+        "option_a": "das Militär",
+        "option_b": "die Wirtschaft",
+        "option_c": "das wahlberechtigte Volk",
+        "option_d": "die Verwaltung",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Tier ist das Wappentier der Bundesrepublik Deutschland?",
+        "image_data": "",
+        "option_a": "Löwe",
+        "option_b": "Adler",
+        "option_c": "Bär",
+        "option_d": "Pferd",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was ist kein Merkmal unserer Demokratie?",
+        "image_data": "",
+        "option_a": "regelmäßige Wahlen",
+        "option_b": "Pressezensur",
+        "option_c": "Meinungsfreiheit",
+        "option_d": "verschiedene Parteien",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …",
+        "image_data": "",
+        "option_a": "Einheit.",
+        "option_b": "Koalition.",
+        "option_c": "Ministerium.",
+        "option_d": "Fraktion.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was ist keine staatliche Gewalt in Deutschland?",
+        "image_data": "",
+        "option_a": "Gesetzgebung",
+        "option_b": "Regierung",
+        "option_c": "Presse",
+        "option_d": "Rechtsprechung",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welche Aussage ist richtig? In Deutschland …",
+        "image_data": "",
+        "option_a": "sind Staat und Religionsgemeinschaften voneinander getrennt.",
+        "option_b": "bilden die Religionsgemeinschaften den Staat.",
+        "option_c": "ist der Staat abhängig von den Religionsgemeinschaften.",
+        "option_d": "bilden Staat und Religionsgemeinschaften eine Einheit.",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was ist Deutschland nicht?",
+        "image_data": "",
+        "option_a": "eine Demokratie",
+        "option_b": "ein Rechtsstaat",
+        "option_c": "eine Monarchie",
+        "option_d": "ein Sozialstaat",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Womit finanziert der deutsche Staat die Sozialversicherung?",
+        "image_data": "",
+        "option_a": "Kirchensteuer",
+        "option_b": "Sozialabgaben",
+        "option_c": "Spendengeldern",
+        "option_d": "Vereinsbeiträgen",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welche Maßnahme schafft in Deutschland soziale Sicherheit?",
+        "image_data": "",
+        "option_a": "die Krankenversicherung",
+        "option_b": "die Autoversicherung",
+        "option_c": "die Gebäudeversicherung",
+        "option_d": "die Haftpflichtversicherung",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wie werden die Regierungschefinnen/Regierungschefs der meisten Bundesländer in Deutschland genannt?",
+        "image_data": "",
+        "option_a": "Erste Ministerin/Erster Minister",
+        "option_b": "Premierministerin/Premierminister",
+        "option_c": "Senatorin/Senator",
+        "option_d": "Ministerpräsidentin/Ministerpräsident",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Die Bundesrepublik Deutschland ist ein demokratischer und sozialer …",
+        "image_data": "",
+        "option_a": "Staatenverbund.",
+        "option_b": "Bundesstaat.",
+        "option_c": "Staatenbund.",
+        "option_d": "Zentralstaat.",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Was hat jedes deutsche Bundesland?",
+        "image_data": "",
+        "option_a": "eine eigene Außenministerin/einen eigenen Außenminister",
+        "option_b": "eine eigene Währung",
+        "option_c": "eine eigene Armee",
+        "option_d": "eine eigene Regierung",
+        "correct_answer": "option_d"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Mit welchen Worten beginnt die deutsche Nationalhymne?",
+        "image_data": "",
+        "option_a": "Völker, hört die Signale …",
+        "option_b": "Einigkeit und Recht und Freiheit …",
+        "option_c": "Freude schöner Götterfunken …",
+        "option_d": "Deutschland einig Vaterland …",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Warum gibt es in einer Demokratie mehr als eine Partei?",
+        "image_data": "",
+        "option_a": "weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden",
+        "option_b": "damit Bestechung in der Politik begrenzt wird",
+        "option_c": "um politische Demonstrationen zu verhindern",
+        "option_d": "um wirtschaftlichen Wettbewerb anzuregen",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wer beschließt in Deutschland ein neues Gesetz?",
+        "image_data": "",
+        "option_a": "die Regierung",
+        "option_b": "das Parlament",
+        "option_c": "die Gerichte",
+        "option_d": "die Polizei",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wann kann in Deutschland eine Partei verboten werden?",
+        "image_data": "",
+        "option_a": "wenn ihr Wahlkampf zu teuer ist",
+        "option_b": "wenn sie gegen die Verfassung kämpft",
+        "option_c": "wenn sie Kritik am Staatsoberhaupt äußert",
+        "option_d": "wenn ihr Programm eine neue Richtung vorschlägt",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wen kann man als Bürgerin/Bürger in Deutschland nicht direkt wählen?",
+        "image_data": "",
+        "option_a": "Abgeordnete des EU-Parlaments",
+        "option_b": "Die Bundespräsidentin/den Bundespräsidenten",
+        "option_c": "Landtagsabgeordnete",
+        "option_d": "Bundestagsabgeordnete",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Zu welcher Versicherung gehört die Pflegeversicherung?",
+        "image_data": "",
+        "option_a": "Sozialversicherung",
+        "option_b": "Unfallversicherung",
+        "option_c": "Hausratsversicherung",
+        "option_d": "Haftpflicht- und Feuerversicherung",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?",
+        "image_data": "",
+        "option_a": "Er baut Straßen und Schulen.",
+        "option_b": "Er verkauft Lebensmittel und Kleidung.",
+        "option_c": "Er versorgt alle Einwohnerinnen und Einwohner kostenlos mit Zeitungen.",
+        "option_d": "Er produziert Autos und Busse.",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört nicht dazu?",
+        "image_data": "",
+        "option_a": "Er bezahlt für alle Staatsangehörigen Urlaubsreisen.",
+        "option_b": "Er zahlt Kindergeld.",
+        "option_c": "Er unterstützt Museen.",
+        "option_d": "Er fördert Sportlerinnen und Sportler.",
+        "correct_answer": "option_a"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?",
+        "image_data": "",
+        "option_a": "der Bundesrat",
+        "option_b": "die Bundespräsidentin/der Bundespräsident",
+        "option_c": "die Bürgerversammlung",
+        "option_d": "die Regierung",
+        "correct_answer": "option_c"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Wer bestimmt in Deutschland die Schulpolitik?",
+        "image_data": "",
+        "option_a": "die Lehrer und Lehrerinnen",
+        "option_b": "die Bundesländer",
+        "option_c": "das Familienministerium",
+        "option_d": "die Universitäten",
+        "correct_answer": "option_b"
+    },
+    {
+        "federal_state": "general",
+        "question_text": "Die Wirtschaftsform in Deutschland nennt man …",
+        "image_data": "",
+        "option_a": "freie Zentralwirtschaft.",
+        "option_b": "soziale Marktwirtschaft.",
+        "option_c": "gelenkte Zentralwirtschaft.",
+        "option_d": "Planwirtschaft.",
+        "correct_answer": "option_b"
+    }
+]
