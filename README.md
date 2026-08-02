@@ -35,15 +35,15 @@
    **Linux:**
    Build and start the bot with the following commands:
    ```bash
-   go build -o bot cmd/bot/main.go
-   ./bot
+   go build -o binary/bot cmd/bot/main.go
+   ./binary/bot
    ```
 
    **Windows:**
    Build and start the bot with the following commands:
    ```bash
-   go build -o bot.exe cmd/bot/main.go
-   bot.exe
+   go build -o binary/bot.exe cmd/bot/main.go
+   binary/bot.exe
    ```
 
 5. **Interact with the Bot:**
