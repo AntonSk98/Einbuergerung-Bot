@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  einbuergerung-bot:
+    image: ghcr.io/antonsk98/einbuergerung-bot:latest
+    container_name: einbuergerung-bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_TOKEN={TELEGRAM_TOKEN}
+      - DATABASE_PATH=/app/einbuergerung.db
+    volumes:
+      - bot_data:/app
+
+volumes:
+  bot_data:
