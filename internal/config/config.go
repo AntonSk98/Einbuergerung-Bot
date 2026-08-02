@@ -34,7 +34,11 @@ func LoadConfig() (*Config, error) {
 
 // getAuthorizedIdentifiers parses a comma-separated list of authorized user IDs from the environment.
 func getAuthorizedIdentifiers() []int64 {
-	authorizedUserIdentifiersString := os.Getenv("AUTHORIZED_USER_IDS")
+	authorizedUserIdentifiersString := strings.TrimSpace(os.Getenv("AUTHORIZED_USER_IDS"))
+	if authorizedUserIdentifiersString == "" {
+		return []int64{}
+	}
+
 	var authorizedUserIdentifiers []int64
 	for _, identifier := range strings.Split(authorizedUserIdentifiersString, ",") {
 		trimmed := strings.TrimSpace(identifier)

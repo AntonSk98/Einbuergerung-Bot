@@ -21,12 +21,22 @@ func NewAuthorizedUserMiddleware(authorizedUserIdentifiers []int64) *AuthorizedU
 
 // RegisterMiddleware wraps a telebot middleware function that validates whether the sender is authorized.
 func (m *AuthorizedUserMiddleware) RegisterMiddleware() telegram.Middleware {
+	// No authorized users configured: allow everyone.
+	if len(m.authorizedUserIdentifiers) == 0 {
+		return telegram.Middleware{
+			Function: func(next telebot.HandlerFunc) telebot.HandlerFunc {
+				return func(c telebot.Context) error {
+					return next(c)
+				}
+			},
+		}
+	}
+
 	middlewareFunc := func(next telebot.HandlerFunc) telebot.HandlerFunc {
 		return func(c telebot.Context) error {
 			currentUserID := c.Sender().ID
 
 			isAllowed := slices.Contains(m.authorizedUserIdentifiers, currentUserID)
-
 			if !isAllowed {
 				return c.Send("🔒 Zugriff verweigert! Dieses Trainingslager ist aktuell privat. Kontaktiere @AntonSk98, um deinen Bot-Schlüssel freizuschalten! 🔑")
 			}
