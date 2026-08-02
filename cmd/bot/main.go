@@ -32,12 +32,10 @@ func main() {
 	resetFederalStateHandler := handlers.NewResetFederalStateHandler(userRepository)
 	resetProgressRepositoryHandler := handlers.NewResetProgressHandler(resetProgressRepository)
 
-	authorizedMiddleware := middleware.NewAuthorizedUserMiddleware(config.AuthorizedUserIds)
 	federalStateMiddleware := middleware.NewFederalStateSelectedMiddleware(userRepository)
 	supportDeveloperMiddleware := middleware.NewSupporDeveloperMiddleware(userProgressRepository)
 
 	middlewares := []telegram.Middleware{
-		authorizedMiddleware.RegisterMiddleware(),
 		federalStateMiddleware.RegisterMiddleware(),
 		supportDeveloperMiddleware.RegisterMiddleware(),
 	}
