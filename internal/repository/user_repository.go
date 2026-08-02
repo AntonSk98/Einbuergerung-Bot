@@ -30,6 +30,13 @@ func (repo *UserRepository) FederalStateSelected(userId int64) bool {
 	return selectedState.String != ""
 }
 
+// ResetFederalState nullifies the selected federal state for the given user in the database.
+func (repo *UserRepository) ResetFederalState(userId int64) error {
+	query := "UPDATE users SET selected_federal_state = NULL WHERE telegram_id = ?"
+	_, err := repo.db.Exec(query, userId)
+	return err
+}
+
 // PersistFederalState saves or updates the user's selected federal state in the database.
 func (repo *UserRepository) PersistFederalState(userId int64, federalState string) error {
 	query := `
