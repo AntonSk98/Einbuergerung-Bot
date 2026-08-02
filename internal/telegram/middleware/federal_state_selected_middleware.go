@@ -2,28 +2,22 @@
 package middleware
 
 import (
-	"strconv"
-	"time"
-
 	"einbuergerung-bot/internal/models"
 	"einbuergerung-bot/internal/repository"
 	"einbuergerung-bot/internal/telegram"
 
-	"github.com/patrickmn/go-cache"
 	"gopkg.in/telebot.v4"
 )
 
 // FederalStateSelectedMiddleware verifies whether the user has chosen a federal state before allowing learning commands.
 type FederalStateSelectedMiddleware struct {
 	userRepository *repository.UserRepository
-	stateCache     *cache.Cache
 }
 
-// NewFederalStateSelectedMiddleware creates a new instance of FederalStateSelectedMiddleware with an initialized TTL cache (15-minute expiration, 30-minute cleanup interval).
+// NewFederalStateSelectedMiddleware creates a new instance of FederalStateSelectedMiddleware without caching.
 func NewFederalStateSelectedMiddleware(userRepository *repository.UserRepository) *FederalStateSelectedMiddleware {
 	return &FederalStateSelectedMiddleware{
 		userRepository: userRepository,
-		stateCache:     cache.New(15*time.Minute, 30*time.Minute),
 	}
 }
 
@@ -37,7 +31,7 @@ func (m *FederalStateSelectedMiddleware) RegisterMiddleware() telegram.Middlewar
 
 			userId := ctx.Sender().ID
 
-			if m.isFederalStateSelectedCached(userId) {
+			if m.userRepository.FederalStateSelected(userId) {
 				return next(ctx)
 			}
 
@@ -50,25 +44,6 @@ func (m *FederalStateSelectedMiddleware) RegisterMiddleware() telegram.Middlewar
 	return telegram.Middleware{
 		Function: middlewareFunc,
 	}
-}
-
-// isFederalStateSelectedCached checks the external go-cache memory store for whether the user has selected a federal state, falling back to the repository if missing.
-func (m *FederalStateSelectedMiddleware) isFederalStateSelectedCached(userId int64) bool {
-	cacheKey := strconv.FormatInt(userId, 10)
-
-	if cachedVal, found := m.stateCache.Get(cacheKey); found {
-		if selected, ok := cachedVal.(bool); ok {
-			return selected
-		}
-	}
-
-	isFederalStateSelected := m.userRepository.FederalStateSelected(userId)
-
-	if isFederalStateSelected {
-		m.stateCache.Set(cacheKey, isFederalStateSelected, cache.DefaultExpiration)
-	}
-
-	return isFederalStateSelected
 }
 
 // initReplyMarkup builds an inline keyboard containing all German federal states for selection.
