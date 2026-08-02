@@ -21,6 +21,7 @@ func main() {
 	questionRepository := repository.NewQuestionRepository(databse)
 	userRepository := repository.NewUserRepository(databse)
 	userProgressRepository := repository.NewUserProgressRepository(databse)
+	resetProgressRepository := repository.NewResetProgressRepository(databse)
 
 	bot := newBot(config)
 
@@ -29,6 +30,7 @@ func main() {
 	selectStateHandler := handlers.NewSelectFederalStateCallbackHandler(userRepository)
 	progressHandler := handlers.NewProgressHandler(userProgressRepository)
 	resetFederalStateHandler := handlers.NewResetFederalStateHandler(userRepository)
+	resetProgressRepositoryHandler := handlers.NewResetProgressHandler(resetProgressRepository)
 
 	authorizedMiddleware := middleware.NewAuthorizedUserMiddleware(config.AuthorizedUserIds)
 	federalStateMiddleware := middleware.NewFederalStateSelectedMiddleware(userRepository)
@@ -47,6 +49,9 @@ func main() {
 		selectStateHandler.RegisterCallback(),
 		progressHandler.RegisterCommand(),
 		resetFederalStateHandler.RegisterCommand(),
+		resetProgressRepositoryHandler.RegisterCommand(),
+		resetProgressRepositoryHandler.RegisterCallbackStepOne(),
+		resetProgressRepositoryHandler.RegisterCallbackStepTwo(),
 	}
 
 	bot.RegisterMiddleware(middlewares)
