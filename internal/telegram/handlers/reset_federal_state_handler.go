@@ -23,7 +23,7 @@ func NewResetFederalStateHandler(userRepository *repository.UserRepository) *Res
 // RegisterCommand registers the /reset_federal_state endpoint with the Telegram bot.
 func (h *ResetFederalStateHandler) RegisterCommand() telegram.Handler {
 	return telegram.Handler{
-		Endpoint: "/reset-federal-state",
+		Endpoint: "/reset_federal_state",
 		Function: func(c telebot.Context) error {
 			userId := c.Sender().ID
 

@@ -27,11 +27,11 @@ Dive headfirst into official BAMF examination questions. Earn XP, dodge the wron
 **How Far Have You Come?**  
 Check your current XP score and see what your current bureaucratic rank is. The finish line is in sight! 📊🔥
 
-### 4. `/reset-federal-state`
+### 4. `/reset_federal_state`
 **Did You Move?**  
 Swapped your gemütlich Bavarian flat for a rainy northern coast? Use this command to switch your *Bundesland* and tackle a brand-new set of regional questions! 🗺️🔄
 
-### 5. `/new-game`
+### 5. `/new_game`
 **The Ultimate Self-Destruct Button**  
 Want to wipe your progress clean at the citizenship office and start completely from scratch? Confirm the two-step prompt and dive back into the chaos! 💥🔄
 

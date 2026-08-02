@@ -21,10 +21,10 @@ func NewResetProgressHandler(repo *repository.ResetProgressRepository) *ResetPro
 	}
 }
 
-// RegisterCommand registers the /new-game command endpoint.
+// RegisterCommand registers the /new_game command endpoint.
 func (h *ResetProgressHandler) RegisterCommand() telegram.Handler {
 	return telegram.Handler{
-		Endpoint: "/new-game",
+		Endpoint: "/new_game",
 		Function: h.handleNewGameCommand,
 	}
 }
